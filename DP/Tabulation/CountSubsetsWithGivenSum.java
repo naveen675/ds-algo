@@ -1,4 +1,4 @@
-static int subsetSum(int [] arr,int n,int target,int [][] dp) {
+static int subsetSumUtil(int [] arr,int n,int target,int [][] dp) {
 		
 		for(int i=0;i<=n;i++) {
 			for(int j=0;j<=target;j++) {
@@ -26,3 +26,16 @@ static int subsetSum(int [] arr,int n,int target,int [][] dp) {
 		return dp[n][target];
 		
 	}
+
+static int subsetSum(int [] arr,int target) {
+  
+  int n = arr.length;
+  int [][] dp = new int[n+1][targett+1];
+  
+   for(int i=0;i<=n;i++) {
+	for(int j=0;j<=target;j++) {
+		Arrays.fill(dp[i], -1);
+			}
+		}
+  return subsetSumUtil(arr,n,target,dp);
+}
