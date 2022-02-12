@@ -17,7 +17,7 @@ class Solution{
 		
 	}
 	
-	static int lps(String s) {
+	static int lrs(String s) {
 		
 		int n =s.length();
 		int m = s.length();
