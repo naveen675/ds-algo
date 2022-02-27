@@ -17,7 +17,7 @@ class Solution{
 		}
 	}
 	
-	static int shortestCommonSuperSequence(String s1,String s2) {
+	static int shortestCommonSuperSeq(String s1,String s2) {
 		
 		int n = s1.length();
 		int m = s2.length();
