@@ -8,13 +8,14 @@ public class RabinKarpAlgo {
 			
 			int charToInt = s.charAt(i);
 			value = value + charToInt* (int)(Math.pow(10,power));
+			power++;
 			
 		}
 		return value;
 	}
 	
-	static int searchForString(String str,String sub) {
-		
+	static List<Integer> searchForString(String str,String sub) {
+		List<Integer> arr = new ArrayList<>();
 		int back = 0;
 		int front= sub.length();
 		
@@ -26,12 +27,12 @@ public class RabinKarpAlgo {
 			strHashValue = findHashValue(strSub);
 			
 			if(strHashValue == subHashValue) {
-				return back;
+				arr.add(back);
 			}
 			back++;
 			front++;
 		}
-		return -1;
+		return arr;
 		
 		
 	}
